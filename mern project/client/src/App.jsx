@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Profile from './pages/Profile';
 import Header from "./components/Header";
 import PrivateRoute from "./components/PrivateRoute";
+import Welcome from "./pages/Welcome";
 
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
       <Route path="/about" element={<About />} />
       <Route element={<PrivateRoute/>}>
       <Route path='/profile' element={<Profile />} />
+      <Route path='/welcome' element={<Welcome />}/>
        
       
      
