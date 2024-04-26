@@ -3,6 +3,7 @@ import { useRef, useState, useEffect } from 'react'
 import {getDownloadURL, getStorage, ref, uploadBytesResumable} from 'firebase/storage';
 import { app } from '../firebase';
 import { updateUserStart, updateUserSuccess, updateUserFailure, deleteUserStart, deleteUserFailure, deleteUserSuccess, signOutStart, signOutFailure, signOutSuccess } from '../redux/user/userSlice';
+import { Link } from 'react-router-dom';
 
 export default function Profile() {
   const fileRef = useRef(null)
@@ -152,20 +153,29 @@ export default function Profile() {
           defaultValue={currentUser.email}
           id='email'
           className='border p-3 rounded-lg'
-onChange={handleChange}
+          onChange={handleChange}
         />
         <input type="password"
           placeholder='password'
           id='password'
           className='border p-3 rounded-lg'
-      onChange={handleChange}
-
+          onChange={handleChange}
         />
         <button disabled={loading} className='bg-slate-700 text-white rounded-lg p-3 uppercase hover:opacity-95 disabled:opacity-80'>{loading ? 'Loading...' : 'Update'}</button>
-      </form>
-      <div className='flex justify-between mt-5'>
-        <span onClick={handleDeleteUser} className='text-red-700 cursor-pointer'>Delete account</span>
-        <span onClick={handleSignOut} className='text-red-700 cursor-pointer'>Sign out</span>
+        <Link className='bg-green-700 text-white p-3 rounded-lg uppercase text-center hover:opacity-95' to={"/create-listing"}>
+          Create Listing
+        </Link>
+        </form>
+        <div className='flex justify-between mt-5'>
+        <span
+          onClick={handleDeleteUser}
+          className='text-red-700 cursor-pointer'
+        >
+          Delete account
+        </span>
+        <span onClick={handleSignOut} className='text-red-700 cursor-pointer'>
+          Sign out
+        </span>
       </div>
 
       <p className='text-red-700 mt-5'>{error ? error : ''}</p>
