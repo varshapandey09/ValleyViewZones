@@ -23,30 +23,16 @@ export default function Footer() {
     }
   }, [location.search]);
   return (
-    <header className='bg-slate-200 shadow-md'>
-      <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
+    <header className='bg-slate-900 text-white'>
+      <div className='flex flex-col justify-center items-center py-4 bg-gray-800 text-white'>
         <Link to='/'>
           <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
-          <span className='text-blue-300'>Valley</span>
-          <span className='text-blue-600'>View</span>
-          <span className='text-blue-800'>Zones</span>
+          <span className='text-blue-200'>Valley</span>
+          <span className='text-green-400'>View</span>
+          <span className='text-blue-900'>Zones</span>
           </h1>
         </Link>
-        <form
-          onSubmit={handleSubmit}
-          className='bg-slate-100 p-3 rounded-lg flex items-center'
-        >
-          <input
-            type='text'
-            placeholder='Search...'
-            className='bg-transparent focus:outline-none w-24 sm:w-64'
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <button>
-            <FaSearch className='text-slate-600' />
-          </button>
-        </form>
+        
         <ul className='flex gap-4'>
           <Link to='/'>
             <li className='hidden sm:inline text-slate-700 hover:underline'>
@@ -67,9 +53,11 @@ export default function Footer() {
               />
             ) : (
               <li className=' text-slate-700 hover:underline'> Sign in</li>
+
             )}
           </Link>
         </ul>
+        <br/><br/><br/><br/>
       </div>
     </header>
   );

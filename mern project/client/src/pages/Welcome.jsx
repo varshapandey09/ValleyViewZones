@@ -71,14 +71,7 @@ function Welcome() {
   animate="visible"
 >
   Welcome {currentUser.username}! 
-  <img
-    className="rounded-full h-15 w-15 object-cover mr-2" // Adjust size and margin as needed
-    src={currentUser.avatar}
-    alt="profile"
-  />
 </motion.div>
-
-
 <motion.div className="hover:underline text-center text-blue-900 text-3xl absolute top-1/2 transform -translate-y-1/2 -translate-x-1/2"
   variants={{
     hidden: {
@@ -91,16 +84,11 @@ function Welcome() {
       transition: { duration: 1, ease: 'easeOut' }, // Defines animation duration and easing
     },
   }}
->
-  <Link to="/">
+><Link to="/">
     Continue...
   </Link>
 </motion.div>
-
-      
-
-      {/* Rest of your welcome page content */}
-    </motion.div>
+  </motion.div>
   );
 }
 
