@@ -145,8 +145,8 @@ export default function Profile() {
   };
 
   return (
-    <div className='p-4 max-w-lg mx-auto'style={{backgroundColor:"rgba(255, 255, 255, 0.4)"}}>
-
+    <div className='content-container h-screen flex justify-center items-center'style={{ backgroundColor: 'blue', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div className='p-3 max-w-lg mx-auto' style={{backgroundColor:"rgba(255,255,255,0.5)", backgroundPosition: 'center'}}>
       <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input 
@@ -262,6 +262,7 @@ export default function Profile() {
           ))}
         </div>
       )}
+      </div>
       </div>
 
   )
