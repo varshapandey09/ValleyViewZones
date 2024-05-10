@@ -3,59 +3,21 @@ import { useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const welcomeVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
-
-const backgroundVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 1, ease: 'easeInOut' } },
-};
-
 function Welcome() {
   const { currentUser } = useSelector((state) => state.user);
 
   return (
-    <motion.div
-      className="welcome-page flex justify-center items-center min-h-screen relative"
-      variants={welcomeVariants}
-      initial="hidden"
-      animate={currentUser ? "visible" : "hidden"}
-    >
-      {/* Animated Background Image */}
+    <div style={{
+      backgroundImage: "url('https://learn.g2.com/hubfs/what%20is%20real%20esate.jpg')",
+      backgroundSize: 'cover', // Adjust as needed (cover, contain, etc.)
+      backgroundPosition: 'center', // Adjust as needed (center, top left, etc.)
+      height: '100vh', // Adjust height as needed
+      width: '100vw', // Adjust width as needed
+    }}>
+    
 
-
-      {/* Animated Background Shapes */}
-      
-      <motion.div
-        className="background-shapes absolute inset-0 z-0"
-        variants={backgroundVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.svg
-          className="shape shape-1 absolute top-0 left-0 w-2/5 h-2/5 rounded-full bg-blue-300"
-          variants={{
-            hidden: { scale: 0 },
-            visible: { scale: 1, transition: { duration: 2, ease: 'easeOut' } },
-          }}
-          initial="hidden"
-          animate="visible"
-        />
-        <motion.svg
-          className="shape shape-2 absolute bottom-0 right-0 w-1/3 h-1/3 rounded-full bg-violet-300"
-          variants={{
-            hidden: { x: '100%', rotate: 0 },
-            visible: { x: 0, rotate: 360, transition: { duration: 2, ease: 'linear' } },
-          }}
-          initial="hidden"
-          animate="visible"
-        />
-        {/* Add more shapes with different variants and animations */}
-      </motion.div>
-
-      <motion.div className="welcome-message text-right text-black font-bold text-5xl flex items-center absolute top-1/4 left-unset transform -translate-y-1/2 -translate-x-1/2"
+      <motion.div className="welcome-message text-black font-bold text-5xl flex absolute top-1/4 transform -translate-y-1/2"
+      style={{display: 'flex', justifyContent: 'center'}}
   variants={{
     hidden: {
       y: '100%', // Starts the element off-screen at the bottom (100% height)
@@ -64,7 +26,7 @@ function Welcome() {
     visible: {
       y: 0, // Animates the element to the top position (y: 0)
       opacity: 1, // Fades in during the animation
-      transition: { duration: 1, ease: 'easeOut' }, // Defines animation duration and easing
+      transition: { duration: 2, ease: 'easeOut' }, // Defines animation duration and easing
     },
   }}
   initial="hidden"
@@ -72,7 +34,7 @@ function Welcome() {
 >
   Welcome {currentUser.username}! 
 </motion.div>
-<motion.div className="hover:underline text-center text-blue-900 text-3xl absolute top-1/2 transform -translate-y-1/2 -translate-x-1/2"
+<motion.div className="hover:underline text-center text-blue-900 text-3xl absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2"
   variants={{
     hidden: {
       y: '100%', // Starts the element off-screen at the bottom (100% height)
@@ -81,14 +43,15 @@ function Welcome() {
     visible: {
       y: 0, // Animates the element to the top position (y: 0)
       opacity: 1, // Fades in during the animation
-      transition: { duration: 1, ease: 'easeOut' }, // Defines animation duration and easing
+      transition: { duration: 2, ease: 'easeOut' }, // Defines animation duration and easing
     },
   }}
 ><Link to="/">
     Continue...
   </Link>
 </motion.div>
-  </motion.div>
+
+  </div>
   );
 }
 

@@ -19,7 +19,7 @@ export default function Profile() {
 
   // firebase Storageallow read;
   // allow write: if
-  // request.resource.size < 2 * 1024 * 1024 && 
+  // request.resource.size <div 2 * 1024 * 1024 && 
   // request.resource.contentType.matches('image/.*')
   useEffect(()=>{
     if(file){
@@ -145,8 +145,14 @@ export default function Profile() {
   };
 
   return (
-    <div className='content-container h-screen flex justify-center items-center'style={{ backgroundColor: 'blue', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-    <div className='p-3 max-w-lg mx-auto' style={{backgroundColor:"rgba(255,255,255,0.5)", backgroundPosition: 'center'}}>
+    <div className='h-screen flex justify-center items-center' style={{
+      backgroundImage: "url('https://www.slidebackground.com/uploads/real-estate-background/download-real-estate-wallpaper-backgrounds-gallery-28.jpg')",
+      backgroundSize: 'cover', // Adjust as needed (cover, contain, etc.)
+      backgroundPosition: 'center', // Adjust as needed (center, top left, etc.)
+      height: '112vh', // Adjust height as needed
+      width: '100vw', // Adjust width as needed
+    }}>
+    <div className='p-3 max-w-lg mx-auto' style={{backgroundColor:"rgba(255,255,255,0.7)"}}>
       <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input 
@@ -204,12 +210,23 @@ export default function Profile() {
       </form>
         <div className='flex justify-between mt-5'>
         <span
-          onClick={handleDeleteUser}
+          onClick={() => {
+            const confirmBox = window.confirm(
+            "Do you really want to delete this account?"
+          )
+          if (confirmBox == true) {
+            handleDeleteUser()}}} 
           className='text-red-700 cursor-pointer'
         >
           Delete account
         </span>
-        <span onClick={handleSignOut} className='text-red-700 cursor-pointer'>
+        <span onClick={() => {
+          const confirmBox = window.confirm(
+          "Do you really want to Sign Out?"
+        )
+        if (confirmBox === true) {
+          handleSignOut()}}} 
+        className='text-red-700 cursor-pointer'>
           Sign out
         </span>
       </div>
@@ -248,7 +265,7 @@ export default function Profile() {
               </Link>
 
               <div className='flex flex-col item-center'>
-                <button
+                <button 
                   onClick={() => handleListingDelete(listing._id)}
                   className='text-red-700 uppercase'
                 >
@@ -263,7 +280,8 @@ export default function Profile() {
         </div>
       )}
       </div>
-      </div>
+    </div>
+      
 
   )
 }
