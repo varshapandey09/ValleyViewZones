@@ -44,6 +44,8 @@ function Welcome() {
       transition: { duration: 2, ease: 'easeOut' }, 
     },
   }}
+  initial="hidden"
+  animate="visible"
 ><Link to="/">
     Click here to continue...
   </Link>
