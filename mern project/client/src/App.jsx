@@ -12,7 +12,6 @@ import UpdateListing from "./pages/UpdateListing";
 import Listing from "./pages/Listing";
 import Search from "./pages/Search";
 import Footer from "./components/Footer";
-import UserListings from "./pages/UserListings";
 
 export default function App() {
   return <BrowserRouter>
@@ -29,7 +28,6 @@ export default function App() {
         <Route path='/welcome' element={<Welcome />}/>
         <Route path='/create-listing' element={<CreateListing />}/>
         <Route path='/update-listing/:listingId' element={<UpdateListing />}/>
-        <Route path='/user-listings' element={<UserListings />}/>
       </Route>
     </Routes>
     <Footer />   
