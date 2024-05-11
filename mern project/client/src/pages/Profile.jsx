@@ -149,7 +149,7 @@ export default function Profile() {
       backgroundImage: "url('https://www.slidebackground.com/uploads/real-estate-background/download-real-estate-wallpaper-backgrounds-gallery-28.jpg')",
       backgroundSize: 'cover', // Adjust as needed (cover, contain, etc.)
       backgroundPosition: 'center', // Adjust as needed (center, top left, etc.)
-      height: '115vh', // Adjust height as needed
+      height: '120vh', // Adjust height as needed
       width: '100vw', // Adjust width as needed
     }}>
     <div className='p-3 max-w-fit mx-auto' style={{backgroundColor:"rgba(255,255,255,0.7)"}}>

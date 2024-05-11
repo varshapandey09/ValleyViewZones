@@ -27,9 +27,9 @@ export default function Footer() {
       <div className='flex flex-col  items-center py-4 p-3 gap-5'>
         <Link to='/'>
           <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
-          <span className='text-blue-200'>Valley</span>
+          <span className='text-blue-300'>Valley</span>
           <span className='text-green-400'>View</span>
-          <span className='text-blue-900'>Zones</span>
+          <span className='text-violet-500'>Zones</span>
           </h1>
         </Link>
         <ul className='flex gap-10'>
@@ -48,7 +48,6 @@ export default function Footer() {
             Contact Us
             </li>
           </Link>
-          <a href="mailto:varsha280902@gmail.com" className='text-sm hover:underline ml-2'></a>
         </ul>
         <p className='m-auto'>
           &copy; {new Date().getFullYear()} ValleyViewZones<br></br>
