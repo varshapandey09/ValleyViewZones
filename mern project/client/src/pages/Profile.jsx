@@ -233,13 +233,14 @@ export default function Profile() {
 
       <p className='text-red-700 mt-5'>{error ? error : ''}</p>
       <p className='text-green-700'>{updateSuccess ? 'User is updated successfully!' : ''}</p>
+      <Link to='/user-listings'>
       <button onClick={handleShowListings} className='text-green-700 w-full'>
         Show Listings
       </button>
+      </Link>
       <p className='text-red-700 mt-5'>
         {showListingsError ? 'Error showing listings' : ''}
       </p>
-
       {userListings && userListings.length > 0 && (
         <div className='flex flex-col gap-4'>
           <h1 className='text-center mt-7 text-2xl font-semibold'>
