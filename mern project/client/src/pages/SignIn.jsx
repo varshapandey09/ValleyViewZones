@@ -43,7 +43,7 @@ export default function SignIn() {
   };
   return (
     <div className='h-screen flex justify-center items-center' style={{ backgroundImage: "url('https://u.realgeeks.media/maxrealusa/_rgg/landscape_images/RowHouses.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
-    <div className='p-3 max-w-lg mx-auto' style={{backgroundColor:"rgba(255,255,255,0.7)"}}>
+    <div className='p-3 max-w-fit mx-auto' style={{backgroundColor:"rgba(255,255,255,0.7)"}}>
 
       <h1 className='text-3xl text-center font-semibold my-7'>Sign In</h1>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>

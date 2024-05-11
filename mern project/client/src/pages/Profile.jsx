@@ -152,7 +152,7 @@ export default function Profile() {
       height: '112vh', // Adjust height as needed
       width: '100vw', // Adjust width as needed
     }}>
-    <div className='p-3 max-w-lg mx-auto' style={{backgroundColor:"rgba(255,255,255,0.7)"}}>
+    <div className='p-3 max-w-fit mx-auto' style={{backgroundColor:"rgba(255,255,255,0.7)"}}>
       <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input 
