@@ -32,7 +32,7 @@ function Welcome() {
 >
   Welcome {currentUser.username}!
 </motion.div>
-<motion.p className="hover:underline text-blue-950 text-3xl p-5 max-w-lg mx-auto text-center"
+<motion.div className="hover:underline text-blue-950 text-3xl p-5 max-w-lg mx-auto text-center"
   variants={{
     hidden: {
       y: '100%', 
@@ -47,7 +47,7 @@ function Welcome() {
 ><Link to="/">
     Click here to continue...
   </Link>
-</motion.p>
+</motion.div>
 
   </div>
   );

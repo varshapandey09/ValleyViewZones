@@ -23,8 +23,8 @@ export default function Footer() {
     }
   }, [location.search]);
   return (
-    <header className='bg-slate-900 text-white'>
-      <div className='flex flex-col justify-center items-center py-4 bg-gray-800 text-white'>
+    <footer className='bg-slate-900 text-white text-center'>
+      <div className='flex flex-col  items-center py-4 p-3 gap-5'>
         <Link to='/'>
           <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
           <span className='text-blue-200'>Valley</span>
@@ -32,34 +32,31 @@ export default function Footer() {
           <span className='text-blue-900'>Zones</span>
           </h1>
         </Link>
-        
-        <ul className='flex gap-4'>
+        <ul className='flex gap-10'>
           <Link to='/'>
-            <li className='hidden sm:inline text-slate-700 hover:underline'>
+            <li className='hidden sm:inline hover:underline'>
               Home
             </li>
           </Link>
           <Link to='/about'>
-            <li className='hidden sm:inline text-slate-700 hover:underline'>
+            <li className='hidden sm:inline hover:underline'>
               About
             </li>
           </Link>
-          <Link to='/profile'>
-            {currentUser ? (
-              <img
-                className='rounded-full h-7 w-7 object-cover'
-                src={currentUser.avatar}
-                alt='profile'
-              />
-            ) : (
-              <li className=' text-slate-700 hover:underline'> Sign in</li>
-
-            )}
+          <Link to='mailto:varsha280902@gmail.com'>
+            <li className='hidden sm:inline hover:underline'>
+            Contact Us
+            </li>
           </Link>
+          <a href="mailto:varsha280902@gmail.com" className='text-sm hover:underline ml-2'></a>
         </ul>
-        <br/><br/><br/><br/>
+        <p className='m-auto'>
+          &copy; {new Date().getFullYear()} ValleyViewZones<br></br>
+          Since 2024<br></br>
+          All rights reserved
+        </p>
       </div>
-    </header>
+    </footer>
   );
 }
 
