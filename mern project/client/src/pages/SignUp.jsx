@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import OAuth from '../components/OAuth.jsx';
 
+
 export default function SignUp() {
   const [formData, setFormData] = useState({});
   const [error, setError] = useState(null);
@@ -15,8 +16,10 @@ export default function SignUp() {
       }
     );
   };
+  
   const handleSubmit = async(e) =>{
     e.preventDefault();
+  
     try {
       setLoading(true);
       const res = await fetch('/api/auth/signup', {

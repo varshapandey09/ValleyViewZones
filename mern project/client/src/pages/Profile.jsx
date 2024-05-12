@@ -145,14 +145,8 @@ export default function Profile() {
   };
 
   return (
-    <div className='h-screen flex justify-center items-center' style={{
-      backgroundImage: "url('https://www.slidebackground.com/uploads/real-estate-background/download-real-estate-wallpaper-backgrounds-gallery-28.jpg')",
-      backgroundSize: 'cover', // Adjust as needed (cover, contain, etc.)
-      backgroundPosition: 'center', // Adjust as needed (center, top left, etc.)
-      height: '120vh', // Adjust height as needed
-      width: '100vw', // Adjust width as needed
-    }}>
-    <div className='p-3 max-w-fit mx-auto' style={{backgroundColor:"rgba(255,255,255,0.7)"}}>
+    <div style={{  background: "linear-gradient(to bottom,#e0f2ff, #d2e3fc, #c4d4ff)"  }}>
+    <div className='p-3 max-w-lg mx-auto' style={{backgroundColor:"rgba(255,255,255,0.7)"}}>
       <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input 
@@ -280,8 +274,7 @@ export default function Profile() {
         </div>
       )}
       </div>
-    </div>
-      
+  </div>      
 
   )
 }

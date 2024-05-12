@@ -48,7 +48,7 @@ export default function Home() {
   }, []);
   
   return (
-    <div style={{ backgroundColor: 'blue-200', backgroundPosition: 'top', backgroundRepeat: 'no-repeat', width: '100%'}}>
+    <div>
       
       {/* top */}
       <div className='flex flex-col gap-3 p-20 px-3 max-w-6xl mx-auto' >
