@@ -9,7 +9,6 @@ function Welcome() {
   return (
     <div style={{
       backgroundImage: "url('https://www.slidebackground.com/uploads/real-estate-background/real-estate-homebuy-home-banner-background-homebuym-1.jpg')",
-      backgroundPosition: 'center',
       backgroundSize: 'cover', 
       height: '100vh', 
       width: '100vw', 
