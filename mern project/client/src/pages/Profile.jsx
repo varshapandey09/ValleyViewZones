@@ -145,9 +145,9 @@ export default function Profile() {
   };
 
   return (
-    <div style={{  background: "linear-gradient(to bottom,#e0f2ff, #d2e3fc, #c4d4ff)"  }}>
-    <div className='p-3 max-w-lg mx-auto' style={{backgroundColor:"rgba(255,255,255,0.7)"}}>
-      <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
+    <div className='flex'>
+    <div className='p-3 my-5 w-1/3 mx-auto shadow-md rounded-2xl bg-blue-800'>
+      <h1 className='text-3xl font-semibold text-white text-center my-7'>Profile</h1>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input 
          onChange={(e)=>setFile(e.target.files[0])}
@@ -162,15 +162,15 @@ export default function Profile() {
             const handleChange = (e) => {
               setFormData({...formData, [e.target.id]: e.target.value});
             }
-          text-red-700 '>
+          text-red-500 font-semibold'>
             Error image upload(image must be less than 2 MB)
           </span>)
             : filePerc > 0 && filePerc < 100 ? 
-            <span className='text-green-700'>
+            <span className='text-green-500 font-semibold'>
               {`Uploading ${filePerc}%`}
             </span>
               : filePerc === 100 ? (
-                <span className = 'text-green-700'>
+                <span className = 'text-green-500 font-semibold'>
                   Image successfully uploaded!
                 </span>)
               :
@@ -197,8 +197,8 @@ export default function Profile() {
           className='border p-3 rounded-lg'
           onChange={handleChange}
         />
-        <button disabled={loading} className='bg-slate-700 text-white rounded-lg p-3 uppercase hover:opacity-95 disabled:opacity-80'>{loading ? 'Loading...' : 'Update'}</button>
-        <Link className='bg-green-700 text-white p-3 rounded-lg uppercase text-center hover:opacity-95' to={"/create-listing"}>
+        <button disabled={loading} className='bg-green-500 font-semibold text-white rounded-lg p-3 uppercase hover:opacity-95 disabled:opacity-80'>{loading ? 'Loading...' : 'Update'}</button>
+        <Link className='bg-violet-400 text-white p-3 font-semibold rounded-lg uppercase text-center hover:opacity-95' to={"/create-listing"}>
           Create Listing
         </Link>
       </form>
@@ -210,7 +210,7 @@ export default function Profile() {
           )
           if (confirmBox == true) {
             handleDeleteUser()}}} 
-          className='text-red-700 cursor-pointer'
+          className='text-red-500 font-semibold cursor-pointer'
         >
           Delete account
         </span>
@@ -220,23 +220,23 @@ export default function Profile() {
         )
         if (confirmBox === true) {
           handleSignOut()}}} 
-        className='text-red-700 cursor-pointer'>
+        className='text-red-500 font-semibold cursor-pointer'>
           Sign out
         </span>
       </div>
 
-      <p className='text-red-700 mt-5'>{error ? error : ''}</p>
-      <p className='text-green-700'>{updateSuccess ? 'User is updated successfully!' : ''}</p>
-      <button onClick={handleShowListings} className='text-green-700 w-full'>
+      <p className='text-red-500 font-semibold mt-5'>{error ? error : ''}</p>
+      <p className='text-green-500 font-semibold'>{updateSuccess ? 'User is updated successfully!' : ''}</p>
+      <button onClick={handleShowListings} className='text-green-500 font-semibold w-full'>
         Show Listings
       </button>
-      <p className='text-red-700 mt-5'>
+      <p className='text-red-500 mt-5 font-semibold'>
         {showListingsError ? 'Error showing listings' : ''}
       </p>
 
       {userListings && userListings.length > 0 && (
         <div className='flex flex-col gap-4'>
-          <h1 className='text-center mt-7 text-2xl font-semibold'>
+          <h1 className='text-center text-white mt-7 text-2xl font-semibold'>
             Your Listings
           </h1>
           {userListings.map((listing) => (
@@ -252,7 +252,7 @@ export default function Profile() {
                 />
               </Link>
               <Link
-                className='text-slate-700 font-semibold  hover:underline truncate flex-1'
+                className='text-white font-semibold  hover:underline truncate flex-1'
                 to={`/listing/${listing._id}`}
               >
                 <p>{listing.name}</p>
@@ -261,12 +261,12 @@ export default function Profile() {
               <div className='flex flex-col item-center'>
                 <button 
                   onClick={() => handleListingDelete(listing._id)}
-                  className='text-red-700 uppercase'
+                  className='text-red-500 uppercase font-semibold'
                 >
                   Delete
                 </button>
                 <Link to={`/update-listing/${listing._id}`}>
-                  <button className='text-green-700 uppercase'>Edit</button>
+                  <button className='text-green-500 uppercase font-semibold'>Edit</button>
                 </Link>
               </div>
             </div>
