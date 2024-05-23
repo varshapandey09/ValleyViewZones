@@ -16,7 +16,7 @@ export default function Home() {
   const [saleListings, setSaleListings] = useState([]);
   const [rentListings, setRentListings] = useState([]);
   
-  const backgroundImage = 'https://www.slidebackground.com/uploads/real-estate-background/real-estate-homebuy-home-banner-background-homebuym-1.jpg';
+  const backgroundImage = 'https://static.vecteezy.com/system/resources/previews/034/814/698/non_2x/ai-generated-green-beautiful-wallpaper-real-estate-free-photo.jpg';
 
   const divTexts = [
     "ValleyViewZones is your ultimate destination for finding the perfect property. Whether you're looking for a cozy apartment, a luxurious home, or a commercial space, ValleyViewZones has a diverse range of listings to suit your needs. Our user-friendly platform makes it easy to browse, compare, and select the best properties in your desired location. Trust ValleyViewZones to guide you in making one of life's most important decisions.",
@@ -62,11 +62,11 @@ export default function Home() {
   }, []);
 
   const textVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: '100%' },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 4 }
+      transition: { duration: 3 }
     }
   };
 
@@ -90,12 +90,12 @@ export default function Home() {
           variants={textVariants}
         >
           <h1 className="text-5xl font-bold">
-            <span className='text-blue-300'>Valley</span>
-            <span className='text-green-500'>View</span>
-            <span className='text-violet-400'>Zones</span>
+            <span className='text-blue-900'>Valley</span>
+            <span className='text-green-900'>View</span>
+            <span className='text-violet-900'>Zones</span>
           </h1>
           <h3 className="mt-4 text-3xl font-bold text-black">
-            <big> Find your next <span className="text-blue-100">perfect</span> place with ease</big>
+            <big> Find your next <span className="text-blue-900">perfect</span> place with ease</big>
           </h3>
           <div className="mt-2 text-lg">
             <big><p className='text-black'>ValleyViewZones is the best place to find your next perfect place to live.</p></big>
@@ -103,7 +103,7 @@ export default function Home() {
           </div>
           <Link
             to={'/search'}
-            className="mt-4 text-lg text-blue-950 font-bold hover:underline bg-blue-100 px-4 py-2 rounded"
+            className="mt-4 text-lg text-blue-950 font-bold hover:underline px-4 py-2 rounded"
           >
             Let's get started...
           </Link>
