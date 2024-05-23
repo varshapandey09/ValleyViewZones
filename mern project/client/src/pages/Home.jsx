@@ -18,12 +18,7 @@ export default function Home() {
   
   const backgroundImage = 'https://static.vecteezy.com/system/resources/previews/034/814/698/non_2x/ai-generated-green-beautiful-wallpaper-real-estate-free-photo.jpg';
 
-  const divTexts = [
-    "ValleyViewZones is your ultimate destination for finding the perfect property. Whether you're looking for a cozy apartment, a luxurious home, or a commercial space, ValleyViewZones has a diverse range of listings to suit your needs. Our user-friendly platform makes it easy to browse, compare, and select the best properties in your desired location. Trust ValleyViewZones to guide you in making one of life's most important decisions.",
-    "At ValleyViewZones, we pride ourselves on providing comprehensive real estate solutions. From detailed property descriptions and high-quality images to virtual tours and neighborhood insights, ValleyViewZones equips you with all the information you need to make informed choices. Our dedicated team of real estate professionals is always ready to assist you, ensuring a seamless and satisfying experience.",
-    "Explore the endless possibilities with ValleyViewZones. Our extensive database of properties includes options for every budget and lifestyle. Whether you're a first-time homebuyer, an experienced investor, or looking to rent, ValleyViewZones offers the best deals and exclusive listings. Stay ahead in the competitive real estate market with ValleyViewZones by your side.",
-    "ValleyViewZones is committed to making your real estate journey as smooth as possible. Our advanced search filters, personalized recommendations, and expert advice help you find properties that match your preferences. With ValleyViewZones, you can be confident that you're getting the best value for your investment. Discover your dream property today with ValleyViewZones."
-  ];
+  
 
   useEffect(() => {
     const fetchOfferListings = async () => {
@@ -62,17 +57,16 @@ export default function Home() {
   }, []);
 
   const textVariants = {
-    hidden: { opacity: 0, y: '100%' },
+    hidden: { opacity: 0, y: '25%' },
     visible: {
       opacity: 1,
       y: 0,
       transition: { duration: 3 }
     }
   };
-
+  
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      {/* Background image with text overlay */}
       <div
         style={{
           backgroundImage: `url(${backgroundImage})`,
@@ -110,20 +104,38 @@ export default function Home() {
         </motion.div>
       </div>
 
-      {/* Horizontal div with 4 vertical divs */}
-      <div className="flex justify-center my-8">
-        <div className="flex gap-4 w-full max-w-6xl">
-          {divTexts.map((text, index) => (
-            <div
-              key={index}
-              className="flex-1  bg-opacity-75 h-64 rounded-md flex items-center justify-center p-4 text-center text-black font-italic" style={{height:'50vh', backgroundColor:"rgba(255,255,255,0.7)" }}
-            >
-              <p>{text}</p>
-            </div>
-          ))}
+      <div class="flex flex-row bg-white rounded-lg py-10">
+        <div class="text-container bg-white w-3/5 mx-auto py-10 pl-16 ">
+          <h2 class="text-4xl font-bold mb-10 text-blue-900">
+            Imagine your dream home...
+          </h2>
+          <p class="text-lg mb-8 leading-loose text-slate-400">
+            Is it a place filled with laughter and cozy evenings by the fireplace? 
+            Maybe it's a bright and airy space perfect for entertaining friends and family.
+            Whatever your vision, <span className='text-blue-700 font-bold'>Valley</span><span className='text-green-700 font-bold'>View</span><span className='text-violet-700 font-bold'>Zones</span> helps you find the perfect match.
+          </p>
+          <ul class="list-none p-0 mb-8 pl-6">
+            <li class="flex items-center space-x-4">
+              <span class="text-slate-500 text-lg font-bold leading-loose">Stop endless searching! Find your haven in minutes.</span>
+            </li>
+            <li class="flex items-center space-x-4">
+              <span class="text-slate-500 text-lg font-bold leading-loose">Fall in love with beautiful listings curated for you.</span>
+            </li>
+            <li class="flex items-center space-x-4">
+              <span class="text-slate-500 text-lg font-bold leading-loose">Turn the key and unlock a new chapter filled with joy.</span>
+            </li>
+          </ul>
+          <p class="text-lg font-bold text-slate-400">
+            Let's make your dream home a  <span className='text-blue-900'> R E A L I T Y!</span>
+          </p>
+        </div>
+        <div className='pb-16'>
+          <img src="https://t3.ftcdn.net/jpg/01/67/07/12/360_F_167071270_P6D1HSu3HD9FYngLzF5bmCIJMgTDL32b.jpg"
+          alt="Dream home image"
+          class="object-cover h-full"
+          ></img>
         </div>
       </div>
-
       <div className="flex-grow">
         {/* Swiper for listings */}
         <Swiper navigation>
