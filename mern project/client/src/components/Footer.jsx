@@ -34,22 +34,27 @@ export default function Footer() {
         </Link>
         <ul className='flex gap-10'>
           <Link to='/'>
-            <li className='hidden sm:inline hover:underline'>
+            <li className='text-sm sm:text-lg inline hover:underline'>
               Home
             </li>
           </Link>
           <Link to='/about'>
-            <li className='hidden sm:inline hover:underline'>
+            <li className='text-sm sm:text-lg inline hover:underline'>
               About
             </li>
           </Link>
+          <Link to='/privacy-policy'>
+            <li className='text-sm sm:text-lg inline hover:underline'>
+              Privacy Policy
+            </li>
+          </Link>
           <Link to='mailto:varsha280902@gmail.com'>
-            <li className='hidden sm:inline hover:underline'>
+            <li className='text-sm sm:text-lg inline hover:underline'>
             Contact Us
             </li>
           </Link>
         </ul>
-        <p className='m-auto'>
+        <p className='text-sm sm:text-lg m-auto'>
           &copy; {new Date().getFullYear()} ValleyViewZones<br></br>
           Since 2024<br></br>
           All rights reserved
