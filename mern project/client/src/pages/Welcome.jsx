@@ -16,7 +16,7 @@ function Welcome() {
     }}>
     
 
-      <motion.div className="welcome-message text-black font-bold text-5xl p-20 max-w-fit mx-auto text-center"
+      <motion.div className="welcome-message text-black font-bold text-3xl sm:text-5xl p-20 max-w-fit mx-auto text-center"
   variants={{
     hidden: {
       y: '100%', 
@@ -33,7 +33,7 @@ function Welcome() {
 >
   Welcome {currentUser.username}!
 </motion.div>
-<motion.div className="hover:underline text-blue-950 text-3xl p-5 max-w-lg mx-auto text-center"
+<motion.div className="hover:underline text-blue-950 text-xl sm:text-3xl p-5 max-w-lg mx-auto text-center"
   variants={{
     hidden: {
       y: '100%', 
