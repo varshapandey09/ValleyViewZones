@@ -6,7 +6,7 @@ export default function About() {
       backgroundImage: "url('https://cdn.create.vista.com/api/media/medium/352613388/stock-photo-home-love-warm-friendly-environment-wooden-housing-model-real-estate?token=')",
       backgroundSize: 'cover', // Adjust as needed (cover, contain, etc.)
       backgroundPosition: 'center', // Adjust as needed (center, top left, etc.)
-      height: '100vh', // Adjust height as needed
+      height: '90vh', // Adjust height as needed
       width: '100vw', // Adjust width as needed
     }}>
     <div className='py-20 px-4 max-w-6xl mx-auto'>

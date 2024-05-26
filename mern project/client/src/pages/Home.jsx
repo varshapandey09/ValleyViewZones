@@ -57,10 +57,10 @@ export default function Home() {
   }, []);
 
   const textVariants = {
-    hidden: { opacity: 0, y: '25%' },
+    hidden: { opacity: 0, y: '50%' },
     visible: {
       opacity: 1,
-      y: 0,
+      y: '20%',
       transition: { duration: 3 }
     }
   };
@@ -72,13 +72,13 @@ export default function Home() {
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          height: '100vh',
+          height: '90vh',
           width: '100vw',
           position: 'relative',
         }}
       >
         <motion.div
-          className="absolute inset-0 flex flex-col justify-center items-center text-center text-white"
+          className="absolute inset-0 flex flex-col justify-top items-top text-center text-white"
           initial="hidden"
           animate="visible"
           variants={textVariants}
