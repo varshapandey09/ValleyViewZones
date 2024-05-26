@@ -39,7 +39,7 @@ export default function Header() {
           <input
             type='text'
             placeholder='Search...'
-            className='bg-transparent focus:outline-none w-24 sm:w-64'
+            className='bg-transparent focus:outline-none w-20 sm:w-64'
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -49,7 +49,7 @@ export default function Header() {
         </form>
         <ul className='flex gap-4'>
           <Link to='/'>
-            <li className='text-sm sm:text-lg inline text-white hover:underline'>
+            <li className='hidden sm:inline text-lg text-white hover:underline'>
               Home
             </li>
           </Link>
